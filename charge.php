@@ -1,6 +1,6 @@
 <?php
 
-require 'webpay-php-1.1.1-full/autoload.php';
+require 'webpay-php-1.1.2-full/autoload.php';
 use WebPay\WebPay;
 require 'config.php';
 

@@ -151,17 +151,17 @@
     },
     {
         "name": "webpay/webpay",
-        "version": "1.1.1",
-        "version_normalized": "1.1.1.0",
+        "version": "1.1.2",
+        "version_normalized": "1.1.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/webpay/webpay-php.git",
-            "reference": "a44045bdc5ccd1fdb5ffae5b129afc3d3f960d01"
+            "reference": "6f61c299eda6a0c84ef0f4d8a489ce083fd8d640"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/webpay/webpay-php/zipball/a44045bdc5ccd1fdb5ffae5b129afc3d3f960d01",
-            "reference": "a44045bdc5ccd1fdb5ffae5b129afc3d3f960d01",
+            "url": "https://api.github.com/repos/webpay/webpay-php/zipball/6f61c299eda6a0c84ef0f4d8a489ce083fd8d640",
+            "reference": "6f61c299eda6a0c84ef0f4d8a489ce083fd8d640",
             "shasum": ""
         },
         "require": {
@@ -170,7 +170,7 @@
         "require-dev": {
             "phpunit/phpunit": "3.7.*"
         },
-        "time": "2013-11-21 13:50:11",
+        "time": "2013-11-22 08:24:46",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

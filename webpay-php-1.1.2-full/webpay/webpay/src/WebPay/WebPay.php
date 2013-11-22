@@ -44,7 +44,7 @@ class WebPay
         $description = ServiceDescription::factory(__DIR__ . '/Resources/service_descriptions/webpay_v1.json');
         $this->client = new Client();
         $this->client->setDescription($description);
-        if(!is_null($apiBase)) {
+        if (!is_null($apiBase)) {
             $this->client->setBaseUrl($apiBase);
         }
         $this->client->setDefaultOption('auth', array($apiKey, '', 'Basic'));

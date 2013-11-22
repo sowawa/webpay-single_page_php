@@ -28,6 +28,22 @@ class CustomersTest extends \WebPay\Tests\WebPayTestCase
         $this->assertPost('/customers', $params);
     }
 
+    public function testCreateWithToken()
+    {
+        $this->mock('customers/create');
+
+        $params = array(
+            'description' => "Test Customer from Java",
+            'email' => "customer@example.com",
+            'card' => 'tok_3dw2T20rzekM1Kf'
+        );
+        $customer = $this->webpay->customers->create($params);
+
+        $this->assertEquals('Test Customer from Java', $customer->description);
+
+        $this->assertPost('/customers', $params);
+    }
+
     public function testRetrieve()
     {
         $this->mock('customers/retrieve');
@@ -115,6 +131,21 @@ class CustomersTest extends \WebPay\Tests\WebPayTestCase
         $this->assertEquals('newmail@example.com', $customer->email);
         $this->assertEquals(2016, $customer->activeCard->expYear);
 
+        $this->assertPost('/customers/' . $id , $newParams);
+    }
+
+    public function testSaveWithToken()
+    {
+        $this->mock('customers/retrieve');
+        $id = 'cus_39o4Fv82E1et5Xb';
+        $customer = $this->webpay->customers->retrieve($id);
+
+        $newParams = array(
+            'card' => 'tok_3dw2T20rzekM1Kf',
+        );
+        $this->mock('customers/update');
+        $customer->setNewCard($newParams['card']);
+        $customer->save();
         $this->assertPost('/customers/' . $id , $newParams);
     }
 

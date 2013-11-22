@@ -29,6 +29,23 @@ class ChargesTest extends \WebPay\Tests\WebPayTestCase
         $this->assertPost('/charges', $params);
     }
 
+    public function testCreateWithToken()
+    {
+        $this->mock('charges/create');
+
+        $params = array(
+            'amount' => 1000,
+            'currency' => "jpy",
+            'card' => 'tok_3dw2T20rzekM1Kf',
+            'description' => "Test Charge from Java",
+        );
+        $charge = $this->webpay->charges->create($params);
+
+        $this->assertEquals('Test Charge from Java', $charge->description);
+
+        $this->assertPost('/charges', $params);
+    }
+
     public function testRetrieve()
     {
         $this->mock('charges/retrieve');
