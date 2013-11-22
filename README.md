@@ -8,7 +8,7 @@ Composer を利用する場合、 [webpay/webpay - Packagist](https://packagist.
 # セットアップ方法
 
 TODO: http://example.com から最新のパッケージ済みの webpay-php ライブラリをダウンロードし、解凍します。
-このドキュメント作成時の最新バージョンは webpay-php-1.1.1-full です。
+このドキュメント作成時の最新バージョンは webpay-php-1.1.2-full です。
 
 あなたのプロジェクトでライブラリを配置している場所に、解凍してできたディレクトリを設置します。
 今回はルートディレクトリの直下にしました。
@@ -17,7 +17,7 @@ PHP ファイルに、次のように記載することで WebPay ライブラ�
 メソッドなど、くわしい使い方については [PHP APIドキュメント | WebPay: 開発者向けクレジットカード決済サービス](https://webpay.jp/docs/api/php) をご覧ください。
 
 ```php
-require 'webpay-php-1.1.1-full/autoload.php';
+require 'webpay-php-1.1.2-full/autoload.php';
 use WebPay\WebPay;
 ```
 
