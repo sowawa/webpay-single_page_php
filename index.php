@@ -16,7 +16,7 @@ require 'config.php';
 <!-- 御自身のサーバにクレジットカード情報を送信すると、クレジットカード情報を適切に扱う義務が生じます。
      JavaScript を利用して webpay token を生成することで、クレジットカード情報を直接あつかわずに済みます。
      webpay-token という name を持つ input が自動的に追加されます。 -->
-      <script src="/checkout.js" class="webpay-button"
+      <script src="https://checkout.webpay.jp/v1/" class="webpay-button"
               data-text="カード情報を入力して支払う"
               data-key="<?php print(PUBLIC_KEY); ?>"></script>
     </form>
