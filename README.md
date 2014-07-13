@@ -3,23 +3,36 @@
 ここで紹介しているやりかたは、 [Composer](http://getcomposer.org) を利用できない場合のための方法です。
 利便性、メンテナンス性の観点から、 Composer を利用することが強く推奨されます。
 
-Composer を利用する場合、 [webpay/webpay - Packagist](https://packagist.org/packages/webpay/webpay) を参照して最新のリリースを `composer.json` の `require` に追加してください。
+Composer を利用する方法は、 [WebPayのライブラリ配布ページ](https://webpay.jp/docs/libraries#php) で説明しています。
 
 # セットアップ方法
 
-TODO: http://example.com から最新のパッケージ済みの webpay-php ライブラリをダウンロードし、解凍します。
-このドキュメント作成時の最新バージョンは webpay-php-1.1.2-full です。
+[WebPayのライブラリ配布ページ](https://webpay.jp/docs/libraries#php) から最新のパッケージ済みの webpay-php ライブラリを取得します。
+`webpay-php-full.x.y.z.zip` (x.y.z はバージョン番号)というファイルをダウンロードし、解凍してください。
+このドキュメント作成時の最新バージョンは webpay-php-fullー2.1.0 です。
 
 あなたのプロジェクトでライブラリを配置している場所に、解凍してできたディレクトリを設置します。
 今回はルートディレクトリの直下にしました。
 
 PHP ファイルに、次のように記載することで WebPay ライブラリが使えるようになります。
-メソッドなど、くわしい使い方については [PHP APIドキュメント | WebPay: 開発者向けクレジットカード決済サービス](https://webpay.jp/docs/api/php) をご覧ください。
+くわしい使い方については [PHP APIドキュメント | WebPay: 開発者向けクレジットカード決済サービス](https://webpay.jp/docs/api/php) をご覧ください。
 
 ```php
-require 'webpay-php-1.1.2-full/autoload.php';
+require 'webpay-php-full-2.1.0/autoload.php';
 use WebPay\WebPay;
 ```
+
+# 手軽にためす
+
+PHP 5.4 以降では、PHP コマンドに組み込みの HTTP サーバが付属しています。次のコマンドをルートディレクトリで実行してください。
+
+```
+php -S localhost:8080
+```
+
+ブラウザで http://localhost:8080 を開くとテストの支払い画面が表示されます。
+
+組み込み HTTP サーバはインストール時の設定によっては利用できない事があります。その場合の動作確認の仕方は他の情報を参照してください。
 
 # このサンプルコードの解説
 
